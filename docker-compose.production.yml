@@ -1,0 +1,10 @@
+volumes:
+  data:
+
+services:
+  mayak_notifier:
+    image: msapik/mayak_notifier
+    volumes:
+      - data:/bot
+    env_file:
+      - ./bot/.env

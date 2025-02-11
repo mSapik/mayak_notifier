@@ -1,0 +1,12 @@
+volumes:
+  data:
+
+services:
+  mayak_notifier:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - data:/bot
+    env_file:
+      - ./bot/.env
