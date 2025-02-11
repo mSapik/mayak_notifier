@@ -78,7 +78,7 @@ def notify_users(context, publish_at, text, file_name=None):
                     chat_id=chat_id,
                     text=message)
         except Exception as e:
-            logger.info(f'Произошла ошибка при отправке сообщения в Telegram: {e}')
+            logger.info(f'Ошибка при отправке сообщения в Telegram: {e}')
 
     if file_name:
         os.remove(str(file_name))
